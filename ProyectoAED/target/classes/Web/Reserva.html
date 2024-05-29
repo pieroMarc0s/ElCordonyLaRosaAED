@@ -8,126 +8,88 @@
     <link rel="icon" href="Img/Logo-cordon.jpg" type="image/png">
 </head>
 <body>
-<header>
-    <div class="back">
-        <div class="menu container">
-            <a href="Principal.html" class="logo"><img src="Img/Logo-cordon.jpg" alt="Logo-cordon" class="small-image"></a>
-            <input type="checkbox" id="menu">
-            <label for="menu">
-                <img src="Img/Menu.png" alt="Opciones" class="Opciones">
-            </label>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="Principal.html">Inicio</a></li>
-                    <li><a href="SobreNostros.html">Sobre Nosotros</a></li>
-                    <li><a href="Pedidos.html">Pedidos</a></li>
-                    <li><a href="Ubicanos.html">Ubicanos</a></li>
-                    <li><a href="Reserva.html">Reservas</a></li>
-                </ul>
-            </nav>
+    <header>
+        <div class="back">
+            <div class="menu container">
+                <a href="#" class="logo"><img src="Img/Logo-cordon.jpg" alt="Logo-cordon" class="small-image"></a>
+                <input type="checkbox" id="menu">
+                <label for="menu">
+                    <img src="Img/Menu.png" alt="Opciones" class="Opciones">
+                </label>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="Principal.html">Inicio</a></li>
+                        <li><a href="SobreNostros.html">Sobre Nosotros</a></li>
+                        <li><a href="Pedidos.html">Pedidos</a></li>
+                        <li><a href="Ubicanos.html">Ubicanos</a></li>
+                        <li><a href="Reserva.html">Reservas</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
+    </header>
+
+    <div class="form-container">
+        <h1>Formulario de Reserva</h1>
+        <form action="procesar_reserva.php" method="POST">
+            <div class="form-group">
+                <label for="nombre"><strong>Nombre:</strong></label>
+                <input type="text" id="txtNombre" name="txtNombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email"><strong>Correo Electrónico:</strong></label>
+                <input type="email" id="txtEmail" name="txtEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono"><strong>Teléfono:</strong></label>
+                <input type="tel" id="txtTelefono" name="txtTelefono" pattern="[0-9]+" title="Ingrese solo números" required>
+            </div>
+            <div class="form-group">
+                <label for="dni"><strong>DNI:</strong></label>
+                <input type="text" id="txtDNI" name="txtDNI" pattern="[0-9]{8}" title="Ingrese solo 8 números" required>
+            </div>
+            <div class="form-group">
+                <label for="sede"><strong>Seleccionar Sede:</strong></label>
+                <select id="sede" name="sede" required>
+                    <option value="">Seleccione una sede</option>
+                    <option value="La Angostura">La Angostura</option>
+                    <option value="Av. Los Maestros">Av. Los Maestros</option>
+                    <option value="Guadalupe">Guadalupe</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="mesa"><strong>Seleccionar Mesa:</strong></label>
+                <select id="mesa" name="mesa" required>
+                    <option value="">Seleccione una mesa</option>
+                    <option value="1">Mesa 1</option>
+                    <option value="2">Mesa 2</option>
+                    <option value="3">Mesa 3</option>
+                    <option value="4">Mesa 4</option>
+                    <option value="5">Mesa 5</option>
+                    <option value="6">Mesa 6</option>
+                    <option value="7">Mesa 7</option>
+                    <option value="8">Mesa 8</option>
+                    <option value="9">Mesa 9</option>
+                    <option value="10">Mesa 10</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fecha"><strong>Fecha de Reserva:</strong></label>
+                <input type="date" id="fecha" name="fecha" class="pedido-input" required>
+            </div>
+            <div class="form-group">
+                <label for="hora"><strong>Hora de Reserva:</strong></label>
+                <input type="time" id="txtHora" name="txtHora" required>
+            </div>
+            <div class="form-group">
+                <label for="mensaje"><strong>Mensaje Adicional:</strong></label>
+                <textarea id="txtMensaje" name="txtMensaje" placeholder="Ingrese alguna especificación"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit"><strong>Enviar Reserva</strong></button>
+            </div>
+        </form>
     </div>
-</header>
-
-<div class="form-container">
-    <h1>Formulario de Reserva</h1>
-    <form action="procesar_reserva.php" method="POST">
-        <div class="form-group">
-            <label for="nombre"><strong>Nombre:</strong></label>
-            <input type="text" id="txtNombre" name="txtNombre" required>
-        </div>
-        <div class="form-group">
-            <label for="email"><strong>Correo Electrónico:</strong></label>
-            <input type="email" id="txtEmail" name="txtEmail" required>
-        </div>
-        <div class="form-group">
-            <label for="telefono"><strong>Teléfono:</strong></label>
-            <input type="tel" id="txtTelefono" name="txtTelefono" pattern="[0-9]+" title="Ingrese solo números" required>
-        </div>
-        <div class="form-group">
-            <label for="dni"><strong>DNI:</strong></label>
-            <input type="text" id="txtDNI" name="txtDNI" pattern="[0-9]{8}" title="Ingrese solo 8 números" required>
-        </div>
-        <div class="form-group">
-            <label for="mesa"><strong>Seleccionar Mesa:</strong></label>
-            <select id="mesa" name="mesa" required>
-                <option value="">Seleccione una mesa</option>
-                <option value="1">Mesa 1</option>
-                <option value="2">Mesa 2</option>
-                <option value="3">Mesa 3</option>
-                <option value="4">Mesa 4</option>
-                <option value="5">Mesa 5</option>
-                <option value="6">Mesa 6</option>
-                <option value="7">Mesa 7</option>
-                <option value="8">Mesa 8</option>
-                <option value="9">Mesa 9</option>
-                <option value="10">Mesa 10</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="fecha"><strong>Fecha de Reserva:</strong></label>
-            <input type="date" id="fecha" name="fecha" class="pedido-input" required>
-        </div>
-        <div class="form-group">
-            <label for="hora"><strong>Hora de Reserva:</strong></label>
-            <input type="time" id="txtHora" name="txtHora" required>
-        </div>
-        <div class="form-group">
-            <label for="mensaje"><strong>Mensaje Adicional:</strong></label>
-            <textarea id="txtMensaje" name="txtMensaje" placeholder="Ingrese alguna especificación"></textarea>
-        </div>
-        <div class="form-group">
-            <button type="submit"><strong>Enviar Reserva</strong></button>
-        </div>
-    </form>
-</div>
-<div id="mensajeReserva" style="display: none;"></div>
-
-<script>
-    function enviarReserva(event) {
-        event.preventDefault(); // Evita que el formulario se envíe automáticamente
-
-        // Obtener los datos del formulario
-        const formData = new FormData(document.getElementById("reservaForm"));
-        const reserva = {};
-        formData.forEach((value, key) => {
-            reserva[key] = value;
-        });
-
-        // Enviar la reserva al servidor
-        fetch('http://localhost:8080/api/reservas', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(reserva),
-        })
-        .then(response => {
-            if (response.ok) {
-                return response.json();
-            } else {
-                throw new Error('Error al enviar la reserva');
-            }
-        })
-        .then(data => {
-            console.log('Reserva enviada:', data);
-            mostrarMensaje("Reserva enviada correctamente.", "success");
-        })
-        .catch(error => {
-            console.error('Error al enviar la reserva:', error);
-            mostrarMensaje("Ha ocurrido un error al enviar la reserva.", "error");
-        });
-    }
-
-    function mostrarMensaje(mensaje, tipo) {
-        const mensajeDiv = document.getElementById("mensajeReserva");
-        mensajeDiv.textContent = mensaje;
-        mensajeDiv.style.display = "block";
-        mensajeDiv.style.color = tipo === "success" ? "green" : "red";
-    }
-
-    const formulario = document.getElementById("reservaForm");
-    formulario.addEventListener("submit", enviarReserva);
-</script>
 </body>
 </html>
