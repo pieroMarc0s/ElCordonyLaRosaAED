@@ -1,0 +1,177 @@
+/* Reseteo de márgenes, padding, box-sizing, decoraciones de texto y lista */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Estilos generales del cuerpo del documento */
+body {
+    font-family: Arial, sans-serif;
+    background: url('Img/Restaurante.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* Centra el contenido del contenedor */
+.Contenedor {
+    text-align: center;
+}
+
+/* Define un ancho máximo y centra el contenedor en la página */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Estilos para el contenedor de fondo */
+.back {
+    padding: 35px 0;
+    background-color: rgba(75, 129, 33, 0.8); /* Fondo verde semi-transparente */
+}
+
+/* Estilos para el menú de navegación */
+.menu{
+    position: absolute; /* Posiciona el menú de forma absoluta dentro de su contenedor */
+    top: 0; /* Alinea el menú al borde superior */
+    left: 0; /* Alinea el menú al borde izquierdo */
+    right: 0; /* Alinea el menú al borde derecho */
+    display: flex; /* Utiliza flexbox para el diseño del menú */
+    align-items: center; /* Centra los elementos del menú verticalmente */
+    justify-content: space-between; /* Distribuye los elementos del menú con espacio entre ellos */
+    z-index: 1000; /* Asegura que el menú esté en la parte superior de otros elementos */
+}
+
+/* Estilo para la imagen pequeña del logo */
+.small-image{
+    width: 60px; /* Establece el ancho de la imagen del logo */
+    height: 80px; /* Establece la altura de la imagen del logo */
+}
+/* Estilo para el texto del logo */
+.logo {
+    font-size: 40px;
+    color: #F97C05;
+    font-weight: 1000;
+    text-transform: uppercase;
+    margin-top: -10px;
+    margin-right: auto;
+}
+
+/* Estilo para los elementos de la lista del navbar */
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+/* Estilo para los enlaces dentro de la lista del navbar */
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+}
+
+/* Cambio de color en hover para los enlaces del navbar */
+.menu .navbar ul li a:hover {
+    color: #F97C05;
+}
+
+/* Oculta el checkbox del menú */
+#menu {
+    display: none;
+}
+
+/* Estilo para el icono del menú */
+.menu-icono {
+    width: 25px;
+}
+
+/* Estilos para el label del menú, oculto inicialmente */
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+/* Aquí está para achicar la imagen de opciones */
+.Opciones {
+    width: 50px;
+    height: 50px;
+}
+
+/* Media query para pantallas con un ancho máximo de 991px */
+@media (max-width: 991px) {
+    .menu {
+        padding: 10px;
+    }
+    .menu label {
+        display: initial;
+    }
+    .back {
+        padding: 45px 0;
+    }
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 20px;
+        background-color: rgba(42, 57, 79, 0.8); /* Fondo del navbar semi-transparente */
+        display: none;
+    }
+    .menu .navbar ul li {
+        width: 100%;
+    }
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+}
+
+/* Estilos específicos para el formulario de reserva */
+.form-container {
+    width: 50%;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}

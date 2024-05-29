@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicanos</title>
+    <link rel="stylesheet" href="StyleUbicanos.css">
+    <link rel="icon" href="Img/Logo-cordon.jpg" type="image/png">
+</head>
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+        color: #333;
+    }
+    .container {
+        max-width: auto;
+        margin: 2em auto;
+        padding: 0 1em;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5em;
+    }
+    .location {
+        background-color: white;
+        flex: 1 1 calc(33.333% - 1.5em);
+        padding: 1.5em;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .location:hover {
+        transform: translateY(-10px);
+    }
+    .location img {
+        width: 100%;
+        border-radius: 8px;
+    }
+    .location-content {
+        padding: 1em 0;
+    }
+    .location h3 {
+        margin-top: 0;
+        color: #e63946;
+    }
+    .location p {
+        margin: 0.5em 0;
+        line-height: 1.6;
+    }
+    .map-link {
+        color: #e63946;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .map-link:hover {
+        text-decoration: underline;
+    }
+
+</style>
+<body>
+<header>
+
+    <div class="back">
+        <div class="menu container">
+            <a href="Principal.html" class="logo"><img src="Img/Logo-cordon.jpg" alt="Logo-cordon" class="small-image"></a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="Img/Menu.png" alt="Opciones" class="Opciones">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="Principal.html">Inicio</a></li>
+                    <li><a href="SobreNostros.html">Sobre Nosotros</a></li>
+                    <li><a href="Pedidos.html">Pedidos</a></li>
+                    <li><a href="Ubicanos.html">Ubicanos</a></li>
+                    <li><a href="Reserva.html">Reservas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <header>
+        <div class="back">
+            <div class="menu container">
+                <a href="#" class="logo"><img src="Img/Logo-cordon.jpg" alt="Logo-cordon" class="small-image"></a>
+                <input type="checkbox" id="menu">
+                <label for="menu">
+                    <img src="Img/Menu.png" alt="Opciones" class="Opciones">
+                </label>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="Principal.html">Inicio</a></li>
+                        <li><a href="SobreNostros.html">Sobre Nosotros</a></li>
+                        <li><a href="Pedidos.html">Pedidos</a></li>
+                        <li><a href="Ubicanos.html">Ubicanos</a></li>
+                        <li><a href="Reserva.html">Reservas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <video autoplay muted loop style="width: 100%; height: 100%;">
+            <source src="ImgUbicanos/Sedes (1).mp4" type="video/mp4">
+        </video>
+    </header>
+    <div class="container">
+        <div class="location">
+            <img src="ImgUbicanos/Sede la angostura.png" alt="Sede Langostura">
+            <div class="location-content">
+                <h3>Sede La Angostura</h3>
+                <p><strong>Dirección:</strong> En Mza. e Lote. 27 urbanizacion Langostura.</p>
+                <p><strong>Teléfono:</strong> (056) 218012</p>
+                <p><strong>Horario:</strong></p>
+                <ul>
+                    <li>Lunes a Viernes: 10:00 AM - 10:00 PM</li>
+                    <li>Sábado y Domingo: 10:00 AM - 11:00 PM</li>
+                </ul>
+                <p><a class="map-link" href="https://www.google.com/maps/place/Restaurante+El+Cordon+y+La+Rosa+-+Residencial+La+Angostura/@-14.0468124,-75.7521228,17z/data=!4m14!1m7!3m6!1s0x9110e331d49f6aeb:0xf71f4da296e3c345!2sRestaurante+El+Cordon+y+La+Rosa+-+Residencial+La+Angostura!8m2!3d-14.0468176!4d-75.7495479!16s%2Fg%2F11txrq9_2h!3m5!1s0x9110e331d49f6aeb:0xf71f4da296e3c345!8m2!3d-14.0468176!4d-75.7495479!16s%2Fg%2F11txrq9_2h?entry=ttu" target="_blank">Ver en Google Maps</a></p>
+            </div>
+        </div>
+
+        <div class="location">
+            <img src="ImgUbicanos/Av los maestros.png" alt="Av los maestros">
+            <div class="location-content">
+                <h3>Sede Av Los Maestros</h3>
+                <p><strong>Dirección:</strong> En Av. Los Maestros D14 frente al Hotel Real Ica 11001 Ica, Perú</p>
+                <p><strong>Teléfono:</strong> (056) 218012</p>
+                <p><strong>Horario:</strong></p>
+                <ul>
+                    <li>Lunes a Viernes: 10:00 AM - 10:00 PM</li>
+                    <li>Sábado y Domingo: 10:00 AM - 11:00 PM</li>
+                </ul>
+                <p><a class="map-link" href="https://www.google.com/maps/place/El+Cord%C3%B3n+Y+La+Rosa/@-14.0708334,-75.7390968,17.92z/data=!4m6!3m5!1s0x9110e"  target="_blank">Ver en Google Maps</a></p>
+            </div>
+        </div>
+        <div class="location">
+            <img src="ImgUbicanos/Sede guada 2.jpg" alt="Guadalupe">
+            <div class="location-content">
+                <h3>Sede Guadalupe</h3>
+                <p><strong>Dirección:</strong> En Car. Panamericana Sur Km. 290 (Interior del Grifo la Estancia)</p>
+                <p><strong>Teléfono:</strong> (056) 218012</p>
+                <p><strong>Horario:</strong></p>
+                <ul>
+                    <li>Lunes a Viernes: 10:00 AM - 10:00 PM</li>
+                    <li>Sábado y Domingo: 10:00 AM - 11:00 PM</li>
+                </ul>
+                <p><a class="map-link" href="https://www.google.com/maps/place/El+Cord%C3%B3n+Y+La+Rosa+Restaurant+Villacuri/@-13.966192,-75.781849,17.83z/data=!4m6!3m5!1s0x9110fdda73c178d1:0xa69cf6d47a4838f3!8m2!3d-13.9660296!4d-75.7804682!16s%2Fg%2F11flbr7b6p?entry=ttu" target="_blank">Ver en Google Maps</a></p>
+            </div>
+        </div>
+    </div>
+</header>
+</body>
+</html>

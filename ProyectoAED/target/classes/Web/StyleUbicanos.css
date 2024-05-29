@@ -1,0 +1,136 @@
+/* Reseteo de márgenes, padding, box-sizing, decoraciones de texto y lista */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Incluye padding y borde en el tamaño total del elemento */
+  text-decoration: none; /* Quita decoraciones de texto, como el subrayado en los enlaces */
+  list-style: none; /* Quita los estilos predeterminados de las listas */
+}
+
+/* Estilos generales del cuerpo del documento */
+  body {
+      font-family: Arial, sans-serif;
+      background: url('Img/Restaurante.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+  }
+
+
+/* Centra el contenido del contenedor */
+.Contenedor{
+  text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+/* Define un ancho máximo y centra el contenedor en la página */
+.container{
+  max-width: 1100px; /* Limita el ancho máximo del contenedor a 1100px */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+/* Estilos para el contenedor de fondo */
+.back {
+  padding: 30px 0;
+  background-color: rgba(75, 129, 33, 0.8); /* Fondo verde semi-transparente */
+}
+
+/* Estilos para el menú de navegación */
+.menu{
+  position: absolute; /* Posiciona el menú de forma absoluta dentro de su contenedor */
+  top: 0; /* Alinea el menú al borde superior */
+  left: 0; /* Alinea el menú al borde izquierdo */
+  right: 0; /* Alinea el menú al borde derecho */
+  display: flex; /* Utiliza flexbox para el diseño del menú */
+  align-items: center; /* Centra los elementos del menú verticalmente */
+  justify-content: space-between; /* Distribuye los elementos del menú con espacio entre ellos */
+  z-index: 1000; /* Asegura que el menú esté en la parte superior de otros elementos */
+}
+
+/* Estilo para la imagen pequeña del logo */
+.small-image{
+  width: 60px; /* Establece el ancho de la imagen del logo */
+  height: 80px; /* Establece la altura de la imagen del logo */
+}
+
+/* Estilo para el texto del logo */
+.logo{
+  font-size: 50px; /* Define el tamaño de la fuente del logo */
+  color: #F97C05; /* Establece el color del texto del logo */
+  font-weight: 1000; /* Define el grosor del texto del logo */
+  text-transform: uppercase; /* Transforma el texto del logo a mayúsculas */
+  margin-top: -10px;
+  margin-right: auto;
+}
+
+/* Estilo para los elementos de la lista del navbar */
+.menu .navbar ul li{
+  position: relative; /* Posiciona los elementos de forma relativa */
+  float: left; /* Hace que los elementos floten a la izquierda */
+}
+
+/* Estilo para los enlaces dentro de la lista del navbar */
+.menu .navbar ul li a{
+  font-size: 18px; /* Define el tamaño de la fuente de los enlaces */
+  padding: 20px; /* Agrega espacio interno alrededor de los enlaces */
+  color: #ffff; /* Establece el color de texto de los enlaces */
+  display: block; /* Hace que los enlaces se comporten como bloques */
+}
+
+/* Cambio de color en hover para los enlaces del navbar */
+.menu .navbar ul li a:hover{
+  color: #F97C05; /* Cambia el color del texto cuando el ratón está sobre el enlace */
+}
+
+/* Oculta el checkbox del menú */
+#menu{
+  display: none; /* Oculta el elemento checkbox */
+}
+
+/* Estilo para el icono del menú */
+.menu-icono{
+
+  width: 25px; /* Define el ancho del icono del menú */
+}
+
+/* Estilos para el label del menú, oculto inicialmente */
+.menu label{
+  cursor: pointer; /* Cambia el cursor al pasar sobre el label */
+  display: none; /* Oculta el label inicialmente */
+}
+/* aqui esta para achicar la imagen de opciones */
+.Opciones {
+  width: 50px;
+  height: 50px;
+}
+
+/* Media query para pantallas con un ancho máximo de 991px */
+@media (max-width: 991px) {
+  .menu{
+      padding: 10px; /* Agrega espacio interno al contenedor del menú */
+  }
+  .menu label{
+      display: initial; /* Muestra el label en pantallas más pequeñas */
+  }
+
+  .back{
+      padding: 45px 0; /* Agrega más espacio interno arriba y abajo en pantallas pequeñas */
+  }
+  .menu .navbar{
+      position: absolute; /* Posiciona el navbar de forma absoluta */
+      top: 100%; /* Coloca el navbar debajo del contenedor del menú */
+      left: 0; /* Alinea el navbar al borde izquierdo */
+      right: 20; /* Alinea el navbar al borde derecho */
+      background-color: #2a394f; /* Establece el color de fondo del navbar */
+      display: none; /* Oculta el navbar inicialmente */
+  }
+
+  .menu .navbar ul li{
+      width: 100%; /* Hace que los elementos del navbar ocupen el 100% del ancho */
+  }
+
+  /* Muestra el navbar cuando el checkbox está seleccionado */
+  #menu:checked ~ .navbar{
+      display: initial; /* Muestra el navbar cuando el checkbox está marcado */
+  }
+  /* Contenedor para la imagen de fondo */
+}
